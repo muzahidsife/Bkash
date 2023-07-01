@@ -1,18 +1,14 @@
-#incomplete code
-#incomplete code
-#incomplete code
 def my_bkash():
     print("1. Check balance")
     print("2. request statement")
     print("3. Change PIN")
     print("4. Priyo Number")
-    print("5. Save Bill")  # incomplete code
+    print("5. Save Bill")                                          # incomplete code
     print("6. Update MNP")
     print("7. Confirm iPhone login")
     print("8. iPhone PIN reset")
     print("9. Helpline")
     print("0 Main menu")
-
 def all():
   print("1. Send Money")
   print("2. Send Money to Non-Bkash User")
@@ -24,9 +20,6 @@ def all():
   print("8. Download Bkash App")
   print("9. My Bkash")
   print("10. Reset PIN")
-#incomplete code
-#incomplete code
-#incomplete code
 def login():
 
   loginn = input("Bkash dial login code : ")
@@ -119,27 +112,45 @@ def login():
       if back == "0":
           return all()
   elif a == "9":
+
       my_bkash()
       statement = input()
       if statement == "1":
          print("Bhai eikhaneo tk khujen?")
-      back = input()
-      if back == "0":
-          return my_bkash()
+         back = input()
+         if back == "0":
+             return my_bkash()
 
+      elif statement == "2":
+          print("Successfully statement requested")
+          back = input()
+          if back == "0":
+              return my_bkash()
 
+      elif statement == "3":
+          number = input("Your phone number :")
+          if number == number:
+              change_pin = input("Your previous PIN : ")
+              Current_pin = input("Set PIN : ")
+              print(f"{change_pin} changed to {Current_pin}")
+              back = input()
+              if back == "0":
+                  return my_bkash()
 
+      elif statement == "4":
+          priyo_number = input("Add a priyo number: ")
 
+          if len(priyo_number) == 11 or 13 or 14:
+              if priyo_number.startswith("+880"):
+                  priyo_number = "+880" + priyo_number[4:]
+              elif priyo_number.startswith("880"):
+                  priyo_number = "+880" + priyo_number[3:]
+              else:
+                  priyo_number = "+880" + priyo_number[1:]
 
-
-
-
+          print(f"You successfully added {priyo_number} as your priyo number.")
 
 
 if __name__ == "__main__":
     login()
 
-#incomplete code
-#incomplete code
-#incomplete code
-#incomplete code
